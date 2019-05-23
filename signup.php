@@ -15,6 +15,44 @@ require ('header.php');
                             Debe indicar todos los campos!
                         </div>
                         <?php
+                    }else if($_GET['error'] === 'invalidmailuid'){
+                        ?>
+                        <div class="alert alert-danger" role="alert">
+                            Email y usuario incorrecto!
+                        </div>
+                        <?php
+                    }else if($_GET['error'] === 'invalidmail'){
+                        ?>
+                        <div class="alert alert-danger" role="alert">
+                            Correo es incorrecto!
+                        </div>
+                        <?php
+                    }else if($_GET['error'] === 'invaliduid'){
+                        ?>
+                        <div class="alert alert-danger" role="alert">
+                            Usuario incorrecto!
+                        </div>
+                        <?php
+                    }else if($_GET['error'] === 'passwordcheck'){
+                        ?>
+                        <div class="alert alert-danger" role="alert">
+                            Las contraseñas no coinciden!
+                        </div>
+                        <?php
+                    }else if($_GET['error'] === 'usertaken'){
+                        ?>
+                        <div class="alert alert-danger" role="alert">
+                            El usuario indicado ya existe!
+                        </div>
+                        <?php
+                    }
+                }else if(isset($_GET['signup'])) {
+                    if($_GET['signup'] === 'success') {
+                        ?>
+                        <div class="alert alert-success" role="alert">
+                            Usuario registrado exitosamente!
+                        </div>
+                        <?php
                     }
                 }
                 ?>
